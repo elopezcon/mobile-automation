@@ -1,0 +1,30 @@
+{
+  "name": "mobile-automation",
+  "version": "1.0.0",
+  "description": "mobile test automation demo with appium and webdriverio",
+  "main": "index.js",
+  "scripts": {
+    "e2e:android:local": "wdio run ./config/wdio.conf.js"
+  },
+  "keywords": [
+    "appium",
+    "webdriverio",
+    "mobile"
+  ],
+  "author": "eduardo lopez contreras",
+  "license": "ISC",
+  "dependencies": {
+    "wdio": "^6.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "7.20.12",
+    "@babel/preset-env": "7.20.2",
+    "@babel/register": "7.18.9",
+    "@wdio/appium-service": "7.25.4",
+    "@wdio/cli": "7.25.4",
+    "@wdio/jasmine-framework": "7.25.4",
+    "@wdio/local-runner": "7.25.4",
+    "@wdio/spec-reporter": "7.25.4",
+    "appium": "1.22.3"
+  }
+}
