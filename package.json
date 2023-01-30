@@ -14,7 +14,9 @@
   "author": "eduardo lopez contreras",
   "license": "ISC",
   "dependencies": {
-    "wdio": "^6.0.1"
+    "dotenv": "16.0.3",
+    "wdio": "6.0.1",
+    "wdio-timeline-reporter": "5.1.4"
   },
   "devDependencies": {
     "@babel/core": "7.20.12",

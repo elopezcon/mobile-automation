@@ -5,6 +5,7 @@ class Header extends CommonMethods {
         super();
         this.$hamburgerMenu = () => $('~test-Menu');
         this.$shoppingCart = () => $('~test-Cart');
+        this.$shoppincartNumer = () => $('android=new UiSelector().description("test-Cart").childSelector(new UiSelector().className("android.widget.TextView"))');
     };
 
     async tapOnShoppingCart () {

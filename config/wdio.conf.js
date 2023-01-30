@@ -1,3 +1,7 @@
+import { TimelineService } from 'wdio-timeline-reporter/timeline-service';
+import dotenv from 'dotenv';
+dotenv.config();
+
 export const config = {
     //
     // ====================
@@ -58,7 +62,7 @@ export const config = {
         "appium:deviceName": "Pixel 5 API 33",
         "appium:automationName": "UIAutomator2",
         "appium:appWaitActivity": "com.swaglabsmobileapp.MainActivity",
-        "appium:app": "/Users/eduardo.contreras/Desktop/Android.SauceLabs.Mobile.Sample.app.2.7.1.apk"
+        "appium:app": process.env.APP_PATH
     }],
     //
     // ===================
@@ -107,7 +111,7 @@ export const config = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    services: [
+    services: [[TimelineService],
         [
             'appium', {
                 args: {
@@ -138,7 +142,7 @@ export const config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
-    reporters: ['spec'],
+    reporters: ['spec',['timeline', { outputDir: './.artifacts' }]],
 
 
     
